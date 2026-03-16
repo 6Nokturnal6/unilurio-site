@@ -1,25 +1,19 @@
-export default function Header(){
+import Link from 'next/link';
 
-return(
-
-<header className="bg-blue-900 text-white">
-
-<div className="max-w-7xl mx-auto flex justify-between items-center p-6">
-
-<div className="text-xl font-bold">
-Universidade Lúrio
-</div>
-
-<nav className="space-x-6">
-
-<a href="/">Home</a> <a href="/about">About</a> <a href="/faculties">Faculties</a> <a href="/research">Research</a> <a href="/admissions">Admissions</a> <a href="/news">News</a> <a href="/students">Students</a> <a href="/contact">Contact</a>
-
-</nav>
-
-</div>
-
-</header>
-
-)
-
+export default function Header() {
+  return (
+    <header>
+      <img src="/logo.png" alt="Logo" width="120" />
+      <nav>
+        <Link href="/">Home</Link> |
+        <Link href="/about">About</Link> |
+        <Link href="/admissions">Admissions</Link> |
+        <Link href="/faculties">Faculties</Link> |
+        <Link href="/news">News</Link> |
+        <Link href="/research">Research</Link> |
+        <Link href="/students">Students</Link>
+      </nav>
+      <hr />
+    </header>
+  );
 }
